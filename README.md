@@ -22,4 +22,15 @@ const archive = new base ("archive_load", { "type": "native", "name": "example",
 
 ```
 
-When defining bases, you don't need establish a type but a name is required. 
+When defining bases, you don't need establish a type but a name is required. If you want to cache data inside the browser to access without having to import it externally each time, you can use the global library's methods to do this.
+
+```js
+
+baslin.cache(archive, key) // This key will be used to access the archive later
+
+// To check the cache you can run the method without any parameters
+
+baslin.cache()
+
+// Output: { key: archive }
+```
